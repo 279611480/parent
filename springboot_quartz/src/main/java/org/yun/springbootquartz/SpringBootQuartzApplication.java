@@ -1,5 +1,6 @@
 package org.yun.springbootquartz;
 
+import cn.hutool.cron.CronUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -15,6 +16,9 @@ public class SpringBootQuartzApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootQuartzApplication.class, args);
+
+        CronUtil.setMatchSecond(true);//支持秒级
+        CronUtil.start(true);//开启所有定时任务
     }
 
 

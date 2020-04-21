@@ -1,0 +1,11 @@
+#执行的类或对象方法所在包的名字
+[org.yun.springbootquartz.controller]
+
+#需要执行的类名和方法名
+## 每分钟执行一次
+TestHutoolCron.TestHutoolCron111 =* */1 * * *
+
+# 每秒执行一次  6位
+TestHutoolCron.TestHutoolCron222 =*/1 * * * * *
+
+# 倘若有第二个不同包的定时任务也可以继续添加     []里面的是包名
