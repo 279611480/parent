@@ -26,12 +26,28 @@
 
     <!--声明子项目-->
     <modules>
-        <module>nacos_springboot</module>
         <module>springboot_quartz</module>
         <module>springboot_ssm</module>
     </modules>
 
     <dependencies>
+
+
+        <!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api
+            实体类注解
+        -->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <!--  &lt;!&ndash;MySql驱动&ndash;&gt;
+          <dependency>
+              <groupId>mysql</groupId>
+              <artifactId>mysql-connector-java</artifactId>
+              <scope>runtime</scope>
+          </dependency>-->
 
         <!--SpringBoot开始-->
         <dependency>
