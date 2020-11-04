@@ -28,6 +28,10 @@ intValue()            将BigDecimal对象中的值以整数返回。
  
  
 */  
+
+//TOD报名导进去，第一行
+
+
 pubic class BigDecimalUtil {  
 /**
  * 用于高精确处理常用的数学运算
