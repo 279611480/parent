@@ -29,6 +29,7 @@
         <module>springboot_quartz</module>
         <module>springboot_ssm</module>
         <module>test</module>
+        <module>common</module>
 <!--
         <module>springboot_shardingjdbc</module>
 -->

@@ -1,0 +1,4 @@
+logging:
+# 以开发环境为例子
+  config: classpath:logback-dev.xml
+
