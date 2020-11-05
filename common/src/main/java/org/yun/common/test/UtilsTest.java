@@ -2,12 +2,10 @@ package org.yun.common.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * @ClassName UtilsTest
- * @Description TODO
+ * @Description TODO 日志模块仍需补充配置
  * @Autor 落笔丶
  * @Date 2020/11/5 23:03
  * @Tel 279611480@qq.com
