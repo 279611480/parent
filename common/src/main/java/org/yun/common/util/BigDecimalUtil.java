@@ -1,4 +1,4 @@
-package test.demo.mytest;
+package org.yun.common.util;
 
 import org.junit.Test;
 

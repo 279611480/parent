@@ -30,13 +30,19 @@
         <module>springboot_ssm</module>
         <module>test</module>
         <module>common</module>
-<!--
-        <module>springboot_shardingjdbc</module>
--->
+        <!--
+                <module>springboot_shardingjdbc</module>
+        -->
     </modules>
 
     <dependencies>
 
+        <!--依赖公共模块，其它子项目不必依赖-->
+        <dependency>
+            <groupId>org.yun</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api
             实体类注解
@@ -98,13 +104,18 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <!--父项目，不该出现此属性
+        https://blog.csdn.net/qq_29765371/article/details/99234759?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.edu_weight
+
+        出现了，公共模块，不被其它子项目依赖，respository(本地仓库)删掉了原有的，再重新导包
+    -->
+    <!--<build>-->
+        <!--<plugins>-->
+            <!--<plugin>-->
+                <!--<groupId>org.springframework.boot</groupId>-->
+                <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
+        <!--</plugins>-->
+    <!--</build>-->
 
 </project>

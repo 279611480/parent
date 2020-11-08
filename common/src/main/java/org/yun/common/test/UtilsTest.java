@@ -2,6 +2,8 @@ package org.yun.common.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
+import org.yun.common.util.result.Result;
+import org.yun.common.util.result.ResultCode;
 
 /**
  * @ClassName UtilsTest
@@ -30,7 +32,21 @@ public class UtilsTest {
         try {
             int i = 100 / 0;
         } catch (Exception e) {
-            log.info("测试是否生效name {}，message {}", name, e.getMessage());
+            // log.info("测试是否生效name {}，message {}", name, e.getMessage());
+            log.info("测试是否生效name {}，message {}", name, e.getMessage() + "，除数不可为0。");
+
+
         }
     }
+
+    @Test
+    public void testResult(){
+        log.info("测试~~");
+        String i= "1";
+        Result result = new Result(ResultCode.FAIL,i);
+        System.out.println(result.getCode() + ",-->" + result.getMessage() + ",-->" + result.getData());
+        log.info("结束~~");
+    }
+
+
 }

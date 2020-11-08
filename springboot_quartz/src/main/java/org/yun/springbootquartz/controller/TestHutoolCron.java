@@ -33,12 +33,12 @@ public class TestHutoolCron {
     * */
 
     /*配置信息在cron.setting里面*/
-    public void TestHutoolCron111() {
+    public void testHutoolCron111() {
         log.info("定时任务，11111111111~~~~~~~~~~~~~~" + DateUtil.formatDateTime(new Date()));
     }
 
     /*配置信息在cron.setting里面*/
-    public void TestHutoolCron222() {
+    public void testHutoolCron222() {
         log.info("定时任务，~~~~~~222222" + DateUtil.formatDateTime(new Date()));
 
 //TODO 有问题       //会覆盖  使用sleep？wait通知等待？互不干扰
