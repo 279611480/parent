@@ -13,7 +13,7 @@ import java.util.List;
  * @Description TODO
  **/
 @Repository
-public interface UserMapper {
+public interface UserMapper  {
 
     @Select("select * from t_user where id = #{id}")
     UserVO selectById(@Param("id") String id);

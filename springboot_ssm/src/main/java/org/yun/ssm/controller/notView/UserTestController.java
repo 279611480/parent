@@ -1,8 +1,9 @@
-package org.yun.ssm.controller;
+package org.yun.ssm.controller.notView;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,6 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/tuser")
+@Slf4j
 public class UserTestController {
 
     @Autowired
@@ -75,5 +77,7 @@ public class UserTestController {
         Page<User> list = userTestService.getUserById2();
         return list;
     }
+
+
 
 }

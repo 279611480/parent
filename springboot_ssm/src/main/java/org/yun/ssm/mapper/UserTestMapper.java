@@ -16,7 +16,7 @@ import java.util.List;
  * @Tel 279611480@qq.com
  */
 @Repository
-public interface UserTestMapper {
+public interface UserTestMapper  {
 
     @Select("select * from t_user where id = #{id}")
     User getUserById(@Param("id") String id);

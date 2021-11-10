@@ -6,11 +6,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.yun.common.util.result.Result;
+import org.yun.common.util.result.ResultCode;
 import org.yun.ssm.dto.UserDTO;
 import org.yun.ssm.mapper.UserMapper;
 import org.yun.ssm.service.UserService;
 import org.yun.ssm.vo.UserVO;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -24,6 +28,7 @@ public class UserServiceImpl implements UserService {
 
     @Autowired(required = true)
     UserMapper userMapper;
+
 
     @Override
     public UserVO selectById(String id) {
@@ -60,5 +65,20 @@ public class UserServiceImpl implements UserService {
             userMapper.update(dto.getId(), dto.getName(), dto.getAge());
         }
 
+    }
+
+    @Override
+    public List<UserVO> getAll(Result result) {
+        List<UserVO> list = new ArrayList<>();
+        try {
+            list = userMapper.selectAll();
+            result.setCode(ResultCode.SUCCESS.code());
+            result.setMessage(ResultCode.SUCCESS.message());
+            //result.setData(list);
+        } catch (Exception e) {
+            result.setCode(ResultCode.FAIL.code());
+            result.setMessage("查询失败！" + e.getCause().getMessage());
+        }
+        return list;
     }
 }

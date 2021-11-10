@@ -1,4 +1,4 @@
-package org.yun.ssm.controller;
+package org.yun.ssm.controller.notView;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

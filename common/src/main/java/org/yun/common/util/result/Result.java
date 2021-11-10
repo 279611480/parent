@@ -1,5 +1,6 @@
 package org.yun.common.util.result;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +14,7 @@ import lombok.NoArgsConstructor;
 @SuppressWarnings({"ALL", "AlibabaLowerCamelCaseVariableNaming"})
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Result {
 
     private Integer code;
