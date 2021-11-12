@@ -1,6 +1,7 @@
 package org.yun.ssm.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +25,7 @@ import java.util.UUID;
  * @Description TODO
  **/
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
     @Autowired(required = true)
@@ -74,10 +76,12 @@ public class UserServiceImpl implements UserService {
             list = userMapper.selectAll();
             result.setCode(ResultCode.SUCCESS.code());
             result.setMessage(ResultCode.SUCCESS.message());
+            log.info("分页查询所有成功！");
             //result.setData(list);
         } catch (Exception e) {
             result.setCode(ResultCode.FAIL.code());
             result.setMessage("查询失败！" + e.getCause().getMessage());
+            log.error("查询失败！" + e.getCause().getMessage());
         }
         return list;
     }
